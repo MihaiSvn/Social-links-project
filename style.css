@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --BG-COLOR: hsl(0, 0%, 8%);
+  --CARD-COLOR: hsl(0, 0%, 12%);
+  --LINK-BOX-COLOR: hsl(0, 0%, 20%);
+  --WHITE-COLOR: hsl(0, 0%, 100%);
+  --LOCATION-COLOR: hsl(75, 94%, 57%);
+  --FONT-FAMILY: Inter, sans-serif;
+  --FONT-SIZE: 12px;
+  --FONT-LIST-SIZE:15px;
+  --FONT-HOVER-SIZE:20px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--FONT-FAMILY);
+  display: grid;
+  place-content: center;
+  background-color: var(--BG-COLOR);
+  color:var(--WHITE-COLOR);
+}
+
+.card{
+    background-color: var(--CARD-COLOR);
+    max-width: 350px;
+    width: 290px;
+    height:450px;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    align-items:center;
+    border-radius: 5%;
+}
+
+.card__fig{
+    flex-grow:1;
+    width:35%;
+    height: 25%;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-top:1rem;
+}
+
+.card__img{
+    border-radius:50%;
+}
+
+.card__figcaption{
+    white-space: nowrap;
+    font-size: var(--FONT-SIZE);
+}
+
+.card__info{
+    margin-top:1rem;
+}
+
+.card__figcaption{
+    text-align: center;
+}
+
+.card__location{
+    
+    text-align: center;
+    color:var(--LOCATION-COLOR);
+    font-style: normal;
+}
+
+.card__quote{
+    margin-top:1rem;
+    font-size:var(--FONT-SIZE);
+    text-align: center;
+}
+
+.card__list{
+    width:80%;
+    flex-grow: 1.5;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.card__el{
+
+    white-space: nowrap;
+    list-style:none;
+    text-align: center;
+    background-color: var(--LINK-BOX-COLOR);
+    border-radius: 5%;
+    padding:0.5rem 1rem;
+}
+
+.card__el a:any-link{
+    color:var(--WHITE-COLOR);
+    text-decoration: none;
+    font-size:var(--FONT-LIST-SIZE);
+}
+
+.card__el a:is(:hover,:focus){
+    color:rgb(170, 167, 167);
+    font-size: var(--FONT-HOVER-SIZE);
+}
+
+@media screen and (min-width:576px) {
+    .card{
+        max-width: 500px;
+        width: 450px;
+        height:  600px;
+    }
+}
+
+@media screen and (min-height:800px){
+    .card{
+        height:700px;
+    }
+    .card_fig{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1000px){
+    :root{
+        --FONT-SIZE:15px;
+        --FONT-LIST-SIZE:20px;
+        --FONT-HOVER-SIZE:22px;
+    }
+}
